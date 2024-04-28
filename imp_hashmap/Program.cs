@@ -2,8 +2,6 @@
 
 class Booking
 {
-    // todo: nao deixar sair na hora que acabar a opcao / nao deixar o programa encerrar
-    // todo: colocar trativa para nao deixar selecionar uma opcao sem nao ter criado nenhuma
 
     public static void Main(string[] args)
     {
@@ -38,6 +36,12 @@ class Booking
                 break;
             case 4:
                 Environment.Exit(0);
+                break;
+            default:
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nOpção inválida!\n");
+                Console.ForegroundColor = ConsoleColor.White;
+                selectOption(booking, name_hotel, number_hotel, date_check_in, date_check_out);
                 break;
         }
     }
